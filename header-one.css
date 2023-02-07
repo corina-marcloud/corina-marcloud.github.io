@@ -1,0 +1,138 @@
+/*=============== NAV ===============*/
+
+.nav {
+    height: var(--header-height);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__toggle {
+    color: var(--accent-color);
+}
+
+.nav__close {
+    color: var(--white-color);
+}
+
+.nav__logo {
+    display: inline-block;
+}
+
+.nav__logo img {
+    max-width: 115px;
+    height: auto;
+}
+
+.nav__btns {
+    justify-self: end;
+}
+
+.nav__toggle {
+    display: inline-flex;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+
+.nav__menu {
+    position: fixed;
+    background-color: var(--mob-menu-color);
+    width: 80%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    box-shadow: -2px 0 4px hsla(var(--hue), 24%, 15%, .1);
+    padding: 4rem 0 0 3rem;
+    transition: .3s;
+    z-index: var(--z-fixed);
+}
+
+.nav__close {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    cursor: pointer;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.nav__link {
+    color: var(--white-color);
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav__button a {
+    color: var(--white-color);
+}
+
+.nav__button {
+    display: none;
+}
+
+.nav__banner {
+    background-color: var(--accent-color);
+}
+
+/* Show menu */
+
+.show-menu {
+    right: 0;
+}
+
+
+/* Change background header */
+
+.scroll-header {
+    box-shadow: 0 1px 4px hsla(var(--hue), 4%, 15%, .1);
+}
+
+.nav__item--desktop {
+    display: block;
+}
+
+/* For small devices */
+
+@media screen and (max-width: 320px) {
+    .nav__item--desktop {
+        display: inline-block;
+    }
+}
+
+
+/* For medium devices */
+
+@media screen and (min-width: 576px) {
+    
+}
+
+@media screen and (min-width: 767px) {
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+        column-gap: 3rem;
+    }
+    .nav__logo img {
+        max-width: 130px;
+    }
+
+    .nav__menu {
+        margin-left: auto;
+    }
+}
+
+
+/* For large devices */
+
+@media screen and (min-width: 992px) {
+    .nav__menu {
+        width: 30%;
+    }
+}
+
