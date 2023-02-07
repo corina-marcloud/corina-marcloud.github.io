@@ -1,0 +1,155 @@
+/*=============== FOOTER ===============*/
+
+footer {
+  font-family: var(--footer-font);
+  background-color: var(--grey-color);
+  color: var(--black-color);
+}
+
+.footer__container {
+  row-gap: 3rem;
+  justify-items: center;
+}
+
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--title-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: var(--mb-2-5);
+  transition: .3s;
+}
+
+ul.footer-links li {
+  display: inline-block;
+  position: relative;
+}
+
+.footer-links li:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: -5px;
+  top: 4px;
+  color: var(--black-color);
+  font-size: 12px;
+}
+
+.footer-links a {
+  color: var(--black-color);
+  font-size: var(--small-font-size);
+  padding: 0 10px;
+}
+
+.footer__social-link i {
+  color: var(--black-color);
+}
+
+.footer__logo img {
+  max-width: 70px;
+}
+
+.footer__title {
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-0-5);
+  display: block;
+}
+
+.footer__content a {
+  color: var(--black-color);
+}
+
+.footer__social {
+  display: inline-flex;
+  column-gap: .75rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.footer__social-link {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  transition: .3s;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black-color);
+}
+
+.footer__social-link:hover {
+  transform: translateY(-.25rem);
+}
+
+.footer__copy,
+.footer__links {
+  justify-self: center;
+}
+
+
+/*=============== SCROLL BAR ===============*/
+
+::-webkit-scrollbar {
+  width: .6rem;
+  background: hsl(var(--hue), 4%, 53%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--hue), 4%, 29%);
+  border-radius: .5rem;
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+
+
+/* For medium devices */
+
+
+@media screen and (min-width: 767px) {
+
+  .form__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__title {
+    text-align: right;
+    display: block;
+  }
+
+  .footer__container {
+    column-gap: 3rem;
+  }
+
+  .footer__logo img {
+    max-width: 100px;
+  }
+}
+
+
+/* For large devices */
+
+@media screen and (min-width: 992px) {
+  .footer__logo {
+    font-size: var(--h3-font-size);
+  }
+
+  .footer__container {
+    grid-template-columns: 1.5fr 0.5fr 1.5fr;
+  }
+
+  .footer__copy {
+    justify-self: end;
+  }
+
+  .footer__links {
+    justify-self: start;
+  }
+}
